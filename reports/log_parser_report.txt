@@ -1,0 +1,15 @@
+==========================================
+   SSH BRUTE-FORCE LOG PARSER & BLOCKER   
+   Target Log: reports/sample_auth.log
+   Date: Sat Nov 14 23:03:32 +06 2026
+==========================================
+
+[+] Scanning for Failed SSH Login Attempts (Threshold: >3)...
+  [i] Normal activity from IP: 10.0.2.15 (1 failed attempts)
+  [!] ALERT: Brute-force detected from IP: 192.168.1.55 (5 failed attempts)
+  [>] Action: Blocking 192.168.1.55 via UFW/Iptables...
+  [+] Simulated Rule Applied: sudo iptables -A INPUT -s 192.168.1.55 -j DROP
+
+==========================================
+   Log Analysis Completed!
+==========================================
