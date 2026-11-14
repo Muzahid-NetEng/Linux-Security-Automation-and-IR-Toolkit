@@ -1,0 +1,20 @@
+==========================================
+   LINUX USER & PRIVILEGE SECURITY AUDIT  
+   Date: Sat Nov 14 18:21:58 +06 2026
+==========================================
+
+[+] 1. Checking for accounts with UID 0 (Root Privileges):
+  -> User: root | UID: 0
+
+[+] 2. Checking for accounts with empty passwords:
+
+[+] 3. Checking members of the 'sudo' group:
+  -> Sudo Users: asus,juniortech
+
+[+] 4. Listing regular human users (UID >= 1000):
+  -> User: asus | Home: /home/asus | Shell: /bin/bash
+  -> User: juniortech | Home: /home/juniortech | Shell: /bin/bash
+
+==========================================
+   Audit Completed Successfully!
+==========================================
