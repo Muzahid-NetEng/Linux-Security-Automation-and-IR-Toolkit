@@ -1,0 +1,14 @@
+==========================================
+   SHA-256 FILE INTEGRITY MONITOR (FIM)   
+   Target Directory: test_critical_files
+   Date: Mon Nov 16 13:51:35 +06 2026
+==========================================
+
+[+] Verifying file integrity against baseline...
+
+test_critical_files/passwd.bak: FAILED
+test_critical_files/sshd_config.bak: OK
+
+==========================================
+   [!] ALERT: File modification or tampering detected!
+==========================================
