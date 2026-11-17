@@ -1,0 +1,26 @@
+==========================================
+   LINUX SYSTEM HARDENING & SUID AUDIT    
+   Date: Wed Nov 18 01:50:30 +06 2026
+==========================================
+
+[+] 1. Checking /etc/shadow Permissions:
+  [PASS] /etc/shadow permissions are secure (640).
+
+[+] 2. Auditing SSH Root Login Policy (/etc/ssh/sshd_config):
+  [PASS] PermitRootLogin is explicitly disabled.
+
+[+] 3. Checking Kernel IPv4 Forwarding (net.ipv4.ip_forward):
+  [PASS] IPv4 packet forwarding is disabled (0).
+
+[+] 4. Scanning for SUID Binaries (Privilege Escalation Audit):
+  [i] Found 9 SUID binaries in /usr/bin.
+  -> /usr/bin/sudo.ws
+  -> /usr/bin/chfn
+  -> /usr/bin/passwd
+  -> /usr/bin/chsh
+  -> /usr/bin/fusermount3
+
+==========================================
+   FINAL HARDENING SCORE: 4 / 4
+   System Hardening Audit Completed!
+==========================================
