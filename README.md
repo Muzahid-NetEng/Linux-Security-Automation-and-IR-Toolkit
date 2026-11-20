@@ -1,4 +1,4 @@
-# 🛡️ Linux Security Automation & Incident Response Toolkit
+# Linux Security Automation & Incident Response Toolkit
 
 ![Platform](https://shields.io)
 ![Language](https://shields.io)
@@ -25,7 +25,7 @@ Linux-Security-Automation-and-IR-Toolkit/
 
 ---
 
-## 🛠️ Core Modules & Capabilities
+## Core Modules & Capabilities
 
 | Module | Primary Function | Key Defensive Checks |
 | :--- | :--- | :--- |
@@ -37,7 +37,7 @@ Linux-Security-Automation-and-IR-Toolkit/
 
 ---
 
-## 🚀 Quick Start & Usage
+## Quick Start & Usage
 
 1. **Clone the repository:**
    ```bash
@@ -64,8 +64,8 @@ Linux-Security-Automation-and-IR-Toolkit/
 
 ---
 
-## 👨‍💻 Author & Contact
+## Author & Contact
 
 **Muzahidul Islam**  
-*Network Security & SOC Operations Enthusiast | CCNA, Cisco Network Security CCNA & Linux Security Trained Linux Security Trained*  
-- **GitHub:** [@Muzahid-NetEng](https://github.com)
+*Network Security & SOC Operations Enthusiast | CCNA, Cisco Network Security & Linux Security Trained*  
+- **GitHub:** [Md Muzahidul Islam](https://github.com/Muzahid-NetEng)
