@@ -67,5 +67,5 @@ Linux-Security-Automation-and-IR-Toolkit/
 ## 👨‍💻 Author & Contact
 
 **Muzahidul Islam**  
-*Network Security & SOC Operations Enthusiast | CCNA & Linux Security Trained*  
+*Network Security & SOC Operations Enthusiast | CCNA, Cisco Network Security CCNA & Linux Security Trained Linux Security Trained*  
 - **GitHub:** [@Muzahid-NetEng](https://github.com)
